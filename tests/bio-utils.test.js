@@ -11,7 +11,7 @@ const {
 
 assert.equal(sanitizeDna('aug c-x'), 'ATGC');
 assert.equal(reverseComplement('ATGCCG'), 'CGGCAT');
-assert.equal(matchesIupac('TTCG', 'TTTV'), true);
+assert.equal(matchesIupac('TTTC', 'TTTV'), true);
 assert.equal(matchesIupac('TTCT', 'TTTV'), false);
 assert.equal(matchesIupac('AGG', 'NGG'), true);
 
