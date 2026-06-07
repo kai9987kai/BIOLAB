@@ -21,7 +21,7 @@
     <!-- Welcome Screen -->
     <div id="welcome-screen" class="welcome-screen active">
         <div class="welcome-content glassmorphic">
-            <h1 class="glitch-text" data-text="BioInnovation Lab">BioInnovation Lab</h1>
+            <h1 class="glitch-text" data-text="BioInnovation Lab" aria-label="BioInnovation Lab">BioInnovation Lab</h1>
             <p class="subtitle">Transparent, reproducible computational biology experiments</p>
             <div class="feature-grid">
                 <div class="feature-card">
@@ -82,7 +82,7 @@
                         Research Hub
                     </button>
                 </nav>
-                <button class="btn-icon" id="export-data" title="Export Data">IO</button>
+                <button class="btn-icon" id="export-data" title="Export Data" aria-label="Export experiment data">IO</button>
             </div>
         </header>
 
@@ -97,24 +97,24 @@
 
                 <div class="module-controls glassmorphic">
                     <div class="control-group">
-                        <label>Population Size:</label>
+                        <label for="ga-population">Population Size:</label>
                         <input type="number" id="ga-population" value="100" min="10" max="1000">
                     </div>
                     <div class="control-group">
-                        <label>Mutation Rate:</label>
+                        <label for="ga-mutation">Mutation Rate:</label>
                         <input type="range" id="ga-mutation" min="0" max="100" value="5">
                         <span id="ga-mutation-val">5%</span>
                     </div>
                     <div class="control-group">
-                        <label>Sequence Length:</label>
+                        <label for="ga-length">Sequence Length:</label>
                         <input type="number" id="ga-length" value="50" min="10" max="200">
                     </div>
                     <div class="control-group">
-                        <label>Random Seed:</label>
+                        <label for="ga-seed">Random Seed:</label>
                         <input type="number" id="ga-seed" value="2026" min="1" step="1">
                     </div>
                     <div class="control-group">
-                        <label>Target Sequence:</label>
+                        <label for="ga-target">Target Sequence:</label>
                         <input type="text" id="ga-target" value="ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG" placeholder="DNA target">
                     </div>
                     <div class="button-group">
@@ -168,14 +168,14 @@
 
                 <div class="module-controls glassmorphic">
                     <div class="control-group">
-                        <label>Cas System:</label>
+                        <label for="crispr-cas-system">Cas System:</label>
                         <select id="crispr-cas-system">
                             <option value="cas9">Cas9 (SpCas9)</option>
                             <option value="cas12">Cas12a (TTTV model)</option>
                         </select>
                     </div>
                     <div class="control-group">
-                        <label>Editing Mode:</label>
+                        <label for="crispr-mode">Editing Mode:</label>
                         <select id="crispr-mode">
                             <option value="standard">Standard CRISPR</option>
                             <option value="base">Base Editing</option>
@@ -183,7 +183,7 @@
                         </select>
                     </div>
                     <div class="control-group full-width">
-                        <label>Target DNA Sequence:</label>
+                        <label for="crispr-target">Target DNA Sequence:</label>
                         <textarea id="crispr-target" rows="5" placeholder="Enter target DNA sequence (e.g., ATCGATCGATCG...)">ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</textarea>
                     </div>
                     <div class="button-group">
@@ -236,7 +236,7 @@
 
                 <div class="module-controls glassmorphic">
                     <div class="control-group">
-                        <label>Visualization Style:</label>
+                        <label for="protein-style">Visualization Style:</label>
                         <select id="protein-style">
                             <option value="ribbon">Ribbon</option>
                             <option value="ball-stick">Ball & Stick</option>
@@ -244,7 +244,7 @@
                         </select>
                     </div>
                     <div class="control-group">
-                        <label>Coloring:</label>
+                        <label for="protein-coloring">Coloring:</label>
                         <select id="protein-coloring">
                             <option value="structure">Residue Position</option>
                             <option value="hydrophobic">Hydrophobicity</option>
@@ -252,11 +252,11 @@
                         </select>
                     </div>
                     <div class="control-group">
-                        <label>Analysis pH:</label>
+                        <label for="protein-ph">Analysis pH:</label>
                         <input type="number" id="protein-ph" value="7" min="0" max="14" step="0.1">
                     </div>
                     <div class="control-group full-width">
-                        <label>Amino Acid Sequence:</label>
+                        <label for="protein-sequence">Amino Acid Sequence:</label>
                         <textarea id="protein-sequence" rows="3" placeholder="Enter amino acid sequence (e.g., MVHLTPEEKS...)">MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH</textarea>
                     </div>
                     <div class="button-group">
@@ -316,7 +316,7 @@
 
                 <div class="module-controls glassmorphic">
                     <div class="control-group">
-                        <label>Rule Set:</label>
+                        <label for="ca-rules">Rule Set:</label>
                         <select id="ca-rules">
                             <option value="conway">Conway's Game of Life</option>
                             <option value="cell-division">Cell Division</option>
@@ -325,16 +325,16 @@
                         </select>
                     </div>
                     <div class="control-group">
-                        <label>Update Speed:</label>
+                        <label for="ca-speed">Update Speed:</label>
                         <input type="range" id="ca-speed" min="1" max="100" value="10">
                         <span id="ca-speed-val">10 FPS</span>
                     </div>
                     <div class="control-group">
-                        <label>Grid Size:</label>
+                        <label for="ca-grid-size">Grid Size:</label>
                         <input type="number" id="ca-grid-size" value="100" min="50" max="200">
                     </div>
                     <div class="control-group">
-                        <label>Random Seed:</label>
+                        <label for="ca-seed">Random Seed:</label>
                         <input type="number" id="ca-seed" value="2026" min="1" step="1">
                     </div>
                     <div class="button-group">

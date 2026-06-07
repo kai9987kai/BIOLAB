@@ -197,6 +197,7 @@
 
         population = survivors.concat(children);
         generation += 1;
+        generationEl.textContent = generation;
         persistConfig(metrics.best);
     }
 

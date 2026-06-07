@@ -288,8 +288,12 @@ button:disabled {
     gap: 10px;
     overflow-x: auto;
     padding: 4px;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     flex: 1;
+}
+
+.main-nav::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-tab {
