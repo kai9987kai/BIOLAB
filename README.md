@@ -1,38 +1,31 @@
 # BIOLAB
 
-**BIOLAB** is a **browser-based biology sandbox**: a small collection of “BIO innovation tools” implemented as a static web app (HTML/CSS/JS) with multiple mini-labs (cellular automata, genetic algorithms, CRISPR concept tooling, protein visualization, and a research hub).  
-Open `index.html` and explore the tools locally—no build step required.  
+BIOLAB is a static, browser-based computational biology sandbox. It prioritizes transparent methods, reproducible simulations, and explicit limitations over clinical or structural claims that the local models cannot support.
 
----
+## Modules
 
-## What’s inside
+- **Genetic Algorithm**: seeded DNA sequence optimization with per-generation fitness and diversity.
+- **CRISPR Guide Explorer**: strand-aware SpCas9 and Cas12a PAM discovery, basic sequence-quality ranking, and design warnings.
+- **Protein Sequence Explorer**: molecular weight, estimated pI, GRAVY, net charge, hydrophobicity, and a conceptual 3D residue trace.
+- **Cellular Automata**: seeded qualitative rule systems with single-generation stepping.
+- **Research Hub**: curated primary sources and regulator pages with evidence and limitation labels, verified 7 June 2026.
 
-This repo is structured as a simple front-end app with a main page and feature modules:
+## Run locally
 
-### Included mini-labs
-- **Cellular Automata Lab** (`cellular-automata.js`)  
-  Explore grid-based biological/complex-systems dynamics (useful for “growth”, patterning, emergence experiments).
-- **Genetic Algorithm Playground** (`genetic-algorithm.js`)  
-  Run evolutionary optimization experiments (populations, mutation/selection loops, fitness exploration).
-- **CRISPR Designer (educational)** (`crispr-designer.js`)  
-  A concept/learning-oriented UI for thinking about guide design and sequence constraints.
-- **Protein Visualizer** (`protein-visualizer.js`)  
-  A module intended for exploring proteins/structures visually in the browser.
-- **Research Hub** (`research-hub.js`)  
-  A place to centralize links, references, and research workflows around the above tools.
+No build step is required. Start a local server:
 
-### App shell
-- `index.html` — the entry point UI
-- `app.js` — app controller / wiring between modules
-- `style.css` — global styling
-
----
-
-## Run it locally
-
-Because this is static HTML/CSS/JS, you can technically double-click `index.html`.  
-However, a local server is recommended (avoids browser restrictions and matches real hosting behavior more closely).
-
-### Option A — Python
-```bash
+```powershell
 python -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+## Test
+
+```powershell
+node tests/bio-utils.test.js
+```
+
+## Scientific scope
+
+The CRISPR score is a transparent sequence heuristic, not an on-target model or genome-wide off-target prediction. The protein trace is not a predicted structure. Cellular automata are qualitative toy rules, not calibrated biological models. Use the exported JSON to record configurations and results.
